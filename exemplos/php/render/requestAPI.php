@@ -16,7 +16,7 @@ function cw_render()
   $chaveSecreta = getenv('CHAVE_SECRETA');
   $catalogo = getenv('CATALOGO');
 
-  $DOMINIO_API = 'https://catalogoexpresso.com.br/ideia2001/render/v2/';
+  $DOMINIO_API = getenv('DOMINIO_API') ?: 'https://catalogoexpresso.com.br/ideia2001/render/v2/';
 
   $pathname = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
